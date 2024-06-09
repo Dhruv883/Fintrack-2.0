@@ -8,10 +8,10 @@ export default function DashboardLayout({ children }) {
 
   return (
     <>
-      <div className="flex h-screen overflow-hidden p-4 bg-bgColor">
+      <div className="flex h-screen overflow-hidden p-4 bg-bgWhite">
         <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden gap-6 px-4 md:px-6 2xl:px-10">
-          {/* <Header /> */}
+          <Header />
           <main className="h-full">
             <div className="h-full">{children}</div>
           </main>

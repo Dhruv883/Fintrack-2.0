@@ -11,17 +11,16 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   const menu = [
     { name: "Dashboard", to: "", icon: "dashboard" },
     { name: "Transactions", to: "transactions", icon: "transaction" },
-    { name: "Investments", to: "investments", icon: "investments" },
-    { name: "Loans", to: "loans", icon: "loans" },
-    { name: "Insurances", to: "insurances", icon: "insurances" },
-    { name: "Profile", to: "profile", icon: "profile" },
+    { name: "Investments", to: "investments", icon: "investment" },
+    { name: "Loans", to: "loans", icon: "loan" },
+    { name: "Insurances", to: "insurances", icon: "insurance" },
   ];
 
   return (
     <aside
       ref={sidebar}
       // absolute left-0 top-0 z-9999
-      className={` bg-gradient-to-b from-grayBlack to-secBlack w-64 h-full rounded-lg p-2 z-50 flex flex-col overflow-y-hidden ${
+      className={` bg-gradient-to-b from-grayBlack to-secBlack w-60 h-full rounded-lg p-2 z-50 flex flex-col overflow-y-hidden ${
         sidebarOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
@@ -35,7 +34,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
             alt="Logo"
             priority
           />
-          {/* <span className="text-3xl text-white font-semibold">Fintrack</span> */}
+          <span className="text-3xl text-white font-semibold">FinTrack</span>
         </Link>
 
         <button
@@ -62,7 +61,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
       </div>
       {/* <!-- SIDEBAR HEADER --> */}
       <div className="py-4 w-11/12 mx-auto"></div>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-1">
         {menu.map((item, index) => {
           return (
             <Link href={`/dashboard/${item.to}`} key={index}>
@@ -73,7 +72,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                     : "bg transparent"
                 }`}
               >
-                <Image height={25} width={25} src="/icons/transaction.svg" />
+                <Image height={25} width={25} src={`/icons/${item.icon}.svg`} />
                 {item.name}
               </div>
             </Link>
@@ -81,12 +80,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
         })}
       </div>
 
-      <div className="mt-auto px-2 py-2">
+      {/* <div className="mt-auto px-2 py-2">
         <button className="w-full bg-grayBlack text-white text-lg p-2 rounded-md flex items-center gap-4">
           <Image height={30} width={30} src="/icons/logout.svg" />
           Sign out
         </button>
-      </div>
+      </div> */}
     </aside>
   );
 };
