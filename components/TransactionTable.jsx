@@ -47,7 +47,7 @@ const TransactionTable = () => {
             >
               Pending
             </td>
-            <td className="text-green">+500</td>
+            <td className="text-green">+ ₹500</td>
           </tr>
           <tr className="hover:bg-gray-100 transition duration-300 ease-in-out [&>td]:w-1/4 [&>td]:py-4">
             <td>Dhruv Dedhia</td>
@@ -60,7 +60,7 @@ const TransactionTable = () => {
             >
               Complete
             </td>
-            <td className="text-red">-500</td>
+            <td className="text-red">- ₹500</td>
           </tr>
           <tr className="hover:bg-gray-100 transition duration-300 ease-in-out [&>td]:w-1/4 [&>td]:py-4">
             <td>Dhruv Dedhia</td>
@@ -73,7 +73,7 @@ const TransactionTable = () => {
             >
               Complete
             </td>
-            <td className="text-green">+500</td>
+            <td className="text-green">+ ₹500</td>
           </tr>
         </tbody>
       </table>

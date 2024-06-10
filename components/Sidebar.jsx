@@ -20,7 +20,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
     <aside
       ref={sidebar}
       // absolute left-0 top-0 z-9999
-      className={` bg-gradient-to-b from-grayBlack to-secBlack w-60 h-full rounded-lg p-2 z-50 flex flex-col overflow-y-hidden ${
+      className={` text-black w-60 h-full rounded-lg p-2 z-50 flex flex-col overflow-y-hidden border bg-white ${
         sidebarOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
@@ -34,7 +34,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
             alt="Logo"
             priority
           />
-          <span className="text-3xl text-white font-semibold">FinTrack</span>
+          <span className="text-3xl text-black font-semibold">FinTrack</span>
         </Link>
 
         <button
@@ -66,9 +66,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
           return (
             <Link href={`/dashboard/${item.to}`} key={index}>
               <div
-                className={`text-white text-md p-2 py-2.5 rounded-md mx-2 flex items-center gap-4 ${
+                className={`text-black text-lg p-2 py-2.5 rounded-md mx-2 flex items-center gap-4 ${
                   pathname.endsWith(item.name.toLowerCase())
-                    ? "bg-grayBlack"
+                    ? "bg-[#d5d9dc86]"
                     : "bg transparent"
                 }`}
               >

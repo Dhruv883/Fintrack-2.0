@@ -1,12 +1,18 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const Header = () => {
   const [showProfile, setShowProfile] = useState(false);
+  const pathname = usePathname().split("/").slice(-1);
 
   return (
-    <div className="relative bg-gradient-to-l from-grayBlack2 to-grayBlack rounded-md p-3 text-white flex justify-end">
+    <div className="relative bg-white rounded-md p-3 text-white flex justify-between items-center">
+      <div className="text-black capitalize text-3xl font-medium">
+        {pathname}
+      </div>
       <span className="flex gap-2 [&>img]:cursor-pointer">
         <Image
           src="/icons/profile.svg"
@@ -22,7 +28,7 @@ const Header = () => {
         />
       </span>
       {showProfile && (
-        <div className="flex flex-col absolute right-0 top-24 text-white z-50 bg-grayBlack2 p-4 gap-3 rounded-xl shadow-2xl mr-3">
+        <div className="bg-white flex flex-col absolute right-0 top-24 text-black z-50 bg-grayBlack2 p-4 gap-3 rounded-xl shadow-2xl mr-3">
           <Link
             href="/dashboard/profile"
             className="flex items-center gap-2 text-lg pr-4 pl-2 "
