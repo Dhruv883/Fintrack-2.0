@@ -1,7 +1,13 @@
 "use client";
-import BalanceChart from "@/components/BalanceChart";
+
+import dynamic from "next/dynamic";
+const BalanceChart = dynamic(() => import("@/components/BalanceChart"), {
+  ssr: false,
+});
+const SummaryChart = dynamic(() => import("@/components/SummaryChart"), {
+  ssr: false,
+});
 import StatsCard from "@/components/StatsCard";
-import SummaryChart from "@/components/SummaryChart";
 import TransactionTable from "@/components/TransactionTable";
 
 const page = () => {

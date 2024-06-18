@@ -1,8 +1,21 @@
 "use client";
 import React from "react";
-import TransactionChart from "@/components/TransactionChart";
+
+import dynamic from "next/dynamic";
+const TransactionChart = dynamic(
+  () => import("@/components/TransactionChart"),
+  {
+    ssr: false,
+  }
+);
+const TransactionSummary = dynamic(
+  () => import("@/components/TransactionSummary"),
+  {
+    ssr: false,
+  }
+);
+
 import Transaction from "@/components/Transaction";
-import TransactionSummary from "@/components/TransactionSummary";
 const page = () => {
   return (
     <div className="space-y-6">

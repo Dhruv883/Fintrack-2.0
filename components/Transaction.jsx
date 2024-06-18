@@ -24,15 +24,11 @@ const Transaction = () => {
                 </svg>
               </div>
               <div>
-                <div className="font-medium">Aspirants</div>
-                <div className="text-sm text-gray-500">Freelance</div>
+                <div className="font-medium text-xl">Aspirants</div>
+                <div className="text-base text-gray-500">Freelance</div>
               </div>
             </div>
-            <div
-              className={`font-medium ${
-                true ? "text-green-500" : "text-red-500"
-              }`}
-            >
+            <div className={`font-medium ${true ? "text-green" : "text-red"}`}>
               + ₹10000
             </div>
           </div>

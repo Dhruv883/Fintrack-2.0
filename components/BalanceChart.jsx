@@ -4,7 +4,6 @@ import ReactApexChart from "react-apexcharts";
 
 const BalanceChart = () => {
   const [timePeriod, setTimePeriod] = useState("Week");
-  if (typeof window == "undefined") return null;
 
   const weekData = {
     series: [
@@ -249,6 +248,7 @@ const BalanceChart = () => {
           height={450}
           width={"100%"}
         />
+        )
       </div>
     </div>
   );
